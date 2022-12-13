@@ -31,13 +31,13 @@
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
         <script>
             var moveLeft = function() {
-                $(".swipe-arrow-left").animate({padding: "0px 2% 0px 0px"}, function(){
-                    $(".swipe-arrow-left").animate({padding: "0px 1% 0px 0px"})
+                $(".swipe-arrow-left").animate({padding: "0px 3% 0px 0px"}, function(){
+                    $(".swipe-arrow-left").animate({padding: "0px 2% 0px 0px"})
                 });
             }
             var moveRight = function() {
-                $(".swipe-arrow-right").animate({padding: "0px 0px 0px 2%"}, function(){
-                    $(".swipe-arrow-right").animate({padding: "0px 0px 0px 1%"})
+                $(".swipe-arrow-right").animate({padding: "0px 0px 0px 3%"}, function(){
+                    $(".swipe-arrow-right").animate({padding: "0px 0px 0px 2%"})
                 });
             }
 
@@ -46,6 +46,11 @@
 
             setInterval(moveRight, 4000);
             setInterval(moveLeft, 4000);
+            
+            $(".front-page-left").click(function(){
+                $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000);
+                $(".front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000);
+            });
         </script>
     </body>
 </html>

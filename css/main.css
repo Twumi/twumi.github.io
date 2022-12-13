@@ -2,6 +2,7 @@ body {
     margin: 0px;
     line-height: 1.5;
     font-family: 'Source Sans Pro', sans-serif;
+    background: linear-gradient(90deg, rgba(30,30,30,1) 0%, rgba(132,132,132,1) 33%, rgba(222,222,222,1) 100%)
 }
 
 .front-page-left {
@@ -12,6 +13,7 @@ body {
     left: 0%;
     bottom: 0%;
     color: rgb(30, 30, 30);
+    z-index: 0;
 }
 
 .front-page-right {
@@ -22,6 +24,7 @@ body {
     left: 50%;
     bottom: 0%;
     color: rgb(222, 222, 222);
+    z-index: 0;
 }
 
 .vertical-center {
@@ -30,6 +33,7 @@ body {
 }
 
 .right-fp-header {
+    left: 0%;
     padding: 0px 0px 0px 0.1em;
     font-size: 5em;
 }
@@ -41,14 +45,15 @@ body {
 }
 
 .swipe-arrow-right {
-    padding: 0px 0px 0px 1%;
+    padding: 0px 0px 0px 2%;
     position: absolute;
     top: 2%;
+    left: 0%;
     font-size: 3em;
 }
 
 .swipe-arrow-left {
-    padding: 0px 1% 0px 0px;
+    padding: 0px 2% 0px 0px;
     position: absolute;
     bottom: 2%;
     right: 0%;
