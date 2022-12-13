@@ -10,7 +10,7 @@
         <title>Project: TwuME</title>
     </head>
     <body>
-        <main>
+        <div>
             <div class="front-page-left">
                 <div class="vertical-center left-fp-header">
                     Twu
@@ -26,6 +26,11 @@
                 <div class="swipe-arrow-right">
                     <i class="fa fa-caret-right"></i>
                 </div>
+            </div>
+        </div>
+        <main>
+            <div class="temp">
+                Hello World!
             </div>
         </main>
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
@@ -47,7 +52,7 @@
             setInterval(moveRight, 4000);
             setInterval(moveLeft, 4000);
             
-            $(".front-page-left").click(function(){
+            $(".front-page-left, .front-page-right").click(function(){
                 $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000);
                 $(".front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000);
             });
