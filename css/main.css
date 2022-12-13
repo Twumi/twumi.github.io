@@ -26,16 +26,31 @@ body {
 
 .vertical-center {
     position: absolute;
-    top: 50%;
+    top: 45%;
 }
 
 .right-fp-header {
-    right: 0%;
-    padding: 0px 0.2em 0px 0px;
-    font-size: 6em;
+    padding: 0px 0px 0px 0.1em;
+    font-size: 5em;
 }
 
 .left-fp-header {
-    padding: 0px 0px 0px 0.2em;
-    font-size: 6em;
+    right: 0%;
+    padding: 0px 0.1em 0px 0px;
+    font-size: 5em;
+}
+
+.swipe-arrow-right {
+    padding: 0px 0px 0px 1%;
+    position: absolute;
+    top: 2%;
+    font-size: 3em;
+}
+
+.swipe-arrow-left {
+    padding: 0px 1% 0px 0px;
+    position: absolute;
+    bottom: 2%;
+    right: 0%;
+    font-size: 3em;
 }
