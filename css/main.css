@@ -2,7 +2,7 @@ body {
     margin: 0px;
     line-height: 1.5;
     font-family: 'Source Sans Pro', sans-serif;
-    background: black;
+    background: rgb(30, 30, 30);
     color: white;
 }
 
@@ -71,9 +71,27 @@ body {
     }
 }
 
-.temp {
-    margin-top: 5em;
+* {
+    box-sizing: border-box;
+}
+
+.img-grid-display {
     display: flex;
+    flex-wrap: wrap;
+    margin: auto;
     justify-content: center;
-    align-items: center;
+}
+
+.img-grid-element {
+    flex: 25%;
+    max-width: 25%;
+}@media screen and (max-width: 800px) {
+    .img-grid-element {
+       flex: 100%;
+       max-width: 100%;
+    }
+}
+
+.img-grid-element img {
+    width: 100%;
 }

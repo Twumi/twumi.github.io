@@ -29,8 +29,17 @@
             </div>
         </div>
         <main>
-            <div class="temp">
-                Hello World!
+            <div class="img-grid-display">
+                <div class="img-grid-element">
+                    <img id="linkedinimage" src="images/linkedin-normal.png">
+                </div>
+                <div class="img-grid-element">
+                    <img src="images/linkedin-normal.png">
+                    <img src="images/linkedin-normal.png">
+                </div>
+                <div class="img-grid-element">
+                    <img src="images/linkedin-normal.png">
+                </div>
             </div>
         </main>
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
@@ -45,17 +54,26 @@
                     $(".swipe-arrow-right").animate({padding: "0px 0px 0px 2%"})
                 });
             }
-
             $(".swipe-arrow-right").mouseover(moveRight);
             $(".swipe-arrow-left").mouseover(moveLeft);
-
             setInterval(moveRight, 1000);
             setInterval(moveLeft, 1000);
-            
+
             $(".front-page-left, .front-page-right").click(function(){
-                $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000);
-                $(".front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000);
+                $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000, function(){
+                    $(this).hide()
+                });
+                $(".front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000, function(){
+                    $(this).hide()
+                });
             });
+
+            $("#linkedinimage").mouseover(function(){
+                $(this).attr("src","images/linkedin-click.png");
+            })
+            $("#linkedinimage").mouseleave(function(){
+                $(this).attr("src","images/linkedin-normal.png");
+            })
         </script>
     </body>
 </html>
