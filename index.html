@@ -5,67 +5,74 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <title>Project: TwuME</title>
     </head>
     <body>
         <div>
-            <div class="front-page-left">
-                <div class="vertical-center left-fp-header">
+            <div id="front-page-left">
+                <div class="vertical-center" id="left-fp-header">
                     Twu
                 </div>
-                <div class="swipe-arrow-left">
+                <div id="swipe-arrow-left">
                     <i class="fa fa-caret-left"></i>
                 </div>
             </div>
-            <div class="front-page-right">
-                <div class="vertical-center right-fp-header">
+            <div id="front-page-right">
+                <div class="vertical-center" id="right-fp-header">
                     ME
                 </div>
-                <div class="swipe-arrow-right">
+                <div id="swipe-arrow-right">
                     <i class="fa fa-caret-right"></i>
                 </div>
             </div>
         </div>
         <main>
-            <div class="img-grid-display">
+            <div class="grid-display">
+                <div id="newline-type">_</div>
+            </div>
+            <div class="grid-display">
                 <div class="img-grid-element">
-                    <img id="linkedinimage" src="images/linkedin-normal.png">
-                </div>
-                <div class="img-grid-element">
-                    <img src="images/linkedin-normal.png">
-                    <img src="images/linkedin-normal.png">
-                </div>
-                <div class="img-grid-element">
-                    <img src="images/linkedin-normal.png">
+                    <a href="https://www.linkedin.com/in/twumi/"><img id="linkedinimage" src="images/linkedin-normal.png"></a>
                 </div>
             </div>
         </main>
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
         <script>
             var moveLeft = function() {
-                $(".swipe-arrow-left").animate({padding: "0px 3% 0px 0px"}, function(){
-                    $(".swipe-arrow-left").animate({padding: "0px 2% 0px 0px"})
+                $("#swipe-arrow-left").animate({padding: "0px 3% 0px 0px"}, function(){
+                    $("#swipe-arrow-left").animate({padding: "0px 2% 0px 0px"})
                 });
             }
             var moveRight = function() {
-                $(".swipe-arrow-right").animate({padding: "0px 0px 0px 3%"}, function(){
-                    $(".swipe-arrow-right").animate({padding: "0px 0px 0px 2%"})
+                $("#swipe-arrow-right").animate({padding: "0px 0px 0px 3%"}, function(){
+                    $("#swipe-arrow-right").animate({padding: "0px 0px 0px 2%"})
                 });
             }
-            $(".swipe-arrow-right").mouseover(moveRight);
-            $(".swipe-arrow-left").mouseover(moveLeft);
+            var typeText = function() {
+                var line = "This is project: TwuME. It's a digital environment that serves multiple purposes such as a playground for small coding projects, a portfolio for my artworks and perhaps in the future even the opportunity to create a webshop of some sort. Feel free to take a look around, share your thoughts, but most of all... enjoy! Kind regards, Twumi"
+                var currentText = $("#newline-type").text().length - 1
+                var newline = line.slice($("#newline-type").text().length - 1);
+                if (newline[0] !== undefined) {
+                    $("#newline-type").text($("#newline-type").text() + newline[0]);
+                }
+            }
+
+
+            $("#swipe-arrow-right").mouseover(moveRight);
+            $("#swipe-arrow-left").mouseover(moveLeft);
             setInterval(moveRight, 1000);
             setInterval(moveLeft, 1000);
 
-            $(".front-page-left, .front-page-right").click(function(){
-                $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000, function(){
+            $("#front-page-left, #front-page-right").click(function(){
+                $("#front-page-left").animate({marginRight: "40%", opacity: 0}, 2000, function(){
                     $(this).hide()
                 });
-                $(".front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000, function(){
+                $("#front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000, function(){
                     $(this).hide()
                 });
+                setInterval(typeText, 25);
             });
 
             $("#linkedinimage").mouseover(function(){
@@ -74,6 +81,8 @@
             $("#linkedinimage").mouseleave(function(){
                 $(this).attr("src","images/linkedin-normal.png");
             })
+
+            
         </script>
     </body>
 </html>

@@ -1,12 +1,12 @@
 body {
     margin: 0px;
     line-height: 1.5;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'IBM Plex Mono', monospace;
     background: rgb(30, 30, 30);
     color: white;
 }
 
-.front-page-left {
+#front-page-left {
     background-color: rgb(222, 222, 222);
     position: absolute;
     top: 0%;
@@ -17,7 +17,7 @@ body {
     z-index: 0;
 }
 
-.front-page-right {
+#front-page-right {
     background-color: rgb(30, 30, 30);
     position: absolute;
     top: 0%;
@@ -33,39 +33,39 @@ body {
     top: 45%;
 }
 
-.right-fp-header {
+#right-fp-header {
     left: 0%;
     padding: 0px 0px 0px 0.1em;
     font-size: 5em;
 }
 
-.left-fp-header {
+#left-fp-header {
     right: 0%;
     padding: 0px 0.1em 0px 0px;
     font-size: 5em;
 }
 
-.swipe-arrow-right {
+#swipe-arrow-right {
     padding: 0px 0px 0px 2%;
     position: absolute;
     top: 2%;
     left: 0%;
     font-size: 3em;
 }@media screen and (max-width: 800px) {
-    .swipe-arrow-right {
+    #swipe-arrow-right {
         font-size: 5em;
         margin-left: 4%;
     }
 }
 
-.swipe-arrow-left {
+#swipe-arrow-left {
     padding: 0px 2% 0px 0px;
     position: absolute;
     bottom: 2%;
     right: 0%;
     font-size: 3em;
 }@media screen and (max-width: 800px) {
-    .swipe-arrow-left {
+    #swipe-arrow-left {
         font-size: 5em;
         margin-right: 4%;
     }
@@ -75,7 +75,7 @@ body {
     box-sizing: border-box;
 }
 
-.img-grid-display {
+.grid-display {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
@@ -94,4 +94,10 @@ body {
 
 .img-grid-element img {
     width: 100%;
+}
+
+#newline-type {
+    width: 40%;
+    padding: 1em;
+    margin-bottom: 4em;
 }
