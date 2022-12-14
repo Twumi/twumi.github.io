@@ -51,6 +51,11 @@ body {
     top: 2%;
     left: 0%;
     font-size: 3em;
+}@media screen and (max-width: 800px) {
+    .swipe-arrow-right {
+        font-size: 5em;
+        margin-left: 4%;
+    }
 }
 
 .swipe-arrow-left {
@@ -59,6 +64,11 @@ body {
     bottom: 2%;
     right: 0%;
     font-size: 3em;
+}@media screen and (max-width: 800px) {
+    .swipe-arrow-left {
+        font-size: 5em;
+        margin-right: 4%;
+    }
 }
 
 .temp {

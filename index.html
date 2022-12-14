@@ -49,8 +49,8 @@
             $(".swipe-arrow-right").mouseover(moveRight);
             $(".swipe-arrow-left").mouseover(moveLeft);
 
-            setInterval(moveRight, 4000);
-            setInterval(moveLeft, 4000);
+            setInterval(moveRight, 1000);
+            setInterval(moveLeft, 1000);
             
             $(".front-page-left, .front-page-right").click(function(){
                 $(".front-page-left").animate({marginRight: "40%", opacity: 0}, 2000);
