@@ -1,0 +1,43 @@
+body {
+    margin: 0px;
+    line-height: 1.5;
+    font-family: 'IBM Plex Mono', monospace;
+    color: rgb(30, 30, 30);
+    background: rgb(222, 222, 222);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-display {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+}
+
+.img-grid-element {
+    flex: 25%;
+    max-width: 25%;
+}@media screen and (max-width: 800px) {
+    .img-grid-element {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+
+.img-grid-element img {
+    width: 100%;
+}
+
+#newline-type {
+    flex: 25%;
+    max-width: 25%;
+    display: block;
+}@media screen and (max-width: 800px) {
+    #newline-type {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
