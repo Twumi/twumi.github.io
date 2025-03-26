@@ -15,6 +15,7 @@ body {
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
+    padding-top: 2%;
 }
 
 .img-grid-element {
