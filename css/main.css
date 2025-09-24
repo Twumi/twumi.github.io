@@ -75,16 +75,23 @@ body {
     box-sizing: border-box;
 }
 
-.grid-display {
+.grid-display-center {
     display: flex;
     flex-wrap: wrap;
     margin: auto;
     justify-content: center;
 }
 
+.grid-display-left {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: left;
+}
+
 .img-grid-element {
-    flex: 25%;
-    max-width: 25%;
+    flex: 10%;
+    max-width: 10%;
 }@media screen and (max-width: 800px) {
     .img-grid-element {
         flex: 100%;
@@ -99,7 +106,7 @@ body {
 #newline-type {
     width: 40%;
     padding: 1em;
-    margin-bottom: 4em;
+    margin-bottom: 2em;
     margin-top: 1em;
 }@media screen and (max-width: 800px) {
     #newline-type {

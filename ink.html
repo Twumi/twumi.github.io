@@ -2,7 +2,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="css/art.css">
+        <link rel="stylesheet" href="css/ink.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300&display=swap">
@@ -11,11 +11,12 @@
     </head>
     <body>
         <main>
-            <div class="grid-display">
+            <div class="grid-display-center">
                 <div class="img-grid-element">
                     <img src="images/InkArt.png">
                 </div>
-                <div id="newline-type">
+                <div id="newline-type"></div>
+                <div id="art-content" style="display:none;">
                     <h3>>> vim artCreator.py</h3>
                       <b>from</b> supplies <b>import</b> paper<br>
                       <b>import</b> artwork<br>
@@ -47,7 +48,18 @@
         </main>
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
         <script>
+            var artHtml = $("#art-content").html();
+            $("#art-content").remove(); // Hide the original
 
+            var i = 0;
+            function typeArt() {
+                if (i <= artHtml.length) {
+                    $("#newline-type").html(artHtml.slice(0, i));
+                    i++;
+                    setTimeout(typeArt, 1);
+                }
+            }
+            typeArt();
         </script>
     </body>
 </html>

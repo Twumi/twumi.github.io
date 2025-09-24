@@ -29,13 +29,16 @@
             </div>
         </div>
         <main>
-            <div class="grid-display">
+            <div class="grid-display-center">
                 <div id="newline-type">_</div>
             </div>
-            <div class="grid-display">
-                <div class="img-grid-element" id="linkedinimage">
-                    <a href="https://www.linkedin.com/in/twumi/"><img src="images/linkedin-normal.png"></a>
-                </div>
+            <div class="grid-display-center">
+                <a href="code.html">-- CODEBINDER --</a>
+                <a href="career.html">-- CAREERBINDER --</a>
+                <a href="art.html">-- ARTBINDER --</a>
+            </div>
+            <div class="grid-display-center">
+                <a href="https://www.linkedin.com/in/twumi/">LINKEDIN</a>
             </div>
         </main>
         <script type="text/javascript" src="scripts/jquery-3.6.1.js"></script>
@@ -51,14 +54,13 @@
                 });
             }
             var typeText = function() {
-                var line = "This is project: TwuME. It's a digital environment that serves multiple purposes such as a playground for small coding projects, a portfolio for my artworks and perhaps in the future even smaller AI projects. Feel free to take a look around, share your thoughts, but most of all... enjoy! Kind regards, Twumi"
+                var line = "Welcome to my digital portfolio. It's similar to a big binder where all my coding projects, work experience and art projects have their own place. Feel free to take a look around and share your thoughts! -- Twumi"
                 var currentText = $("#newline-type").text().length - 1
                 var newline = line.slice($("#newline-type").text().length - 1);
                 if (newline[0] !== undefined) {
                     $("#newline-type").text($("#newline-type").text() + newline[0]);
                 }
             }
-
 
             $("#swipe-arrow-right").mouseover(moveRight);
             $("#swipe-arrow-left").mouseover(moveLeft);
@@ -72,15 +74,9 @@
                 $("#front-page-right").animate({marginLeft: "40%", opacity: 0}, 2000, function(){
                     $(this).hide()
                 });
-                setInterval(typeText, 25);
+                setInterval(typeText, 15);
             });
 
-            $("#linkedinimage").mouseover(function(){
-                $(this).attr("src","images/linkedin-click.png");
-            })
-            $("#linkedinimage").mouseleave(function(){
-                $(this).attr("src","images/linkedin-normal.png");
-            })
         </script>
     </body>
 </html>
